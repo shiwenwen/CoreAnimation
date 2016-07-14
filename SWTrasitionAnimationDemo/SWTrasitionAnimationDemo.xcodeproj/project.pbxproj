@@ -17,6 +17,7 @@
 		2BA11E501D376FD400AAE7F3 /* PresentAnimated.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA11E4F1D376FD400AAE7F3 /* PresentAnimated.m */; };
 		2BA11E531D377B0A00AAE7F3 /* DisMissAnimated.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA11E521D377B0A00AAE7F3 /* DisMissAnimated.m */; };
 		2BA11E561D3783D400AAE7F3 /* PercentDrivenlnteractive.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA11E551D3783D400AAE7F3 /* PercentDrivenlnteractive.m */; };
+		2BA11E591D37ADC100AAE7F3 /* PushPageAnimated.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA11E581D37ADC100AAE7F3 /* PushPageAnimated.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		2BA11E521D377B0A00AAE7F3 /* DisMissAnimated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisMissAnimated.m; sourceTree = "<group>"; };
 		2BA11E541D3783D400AAE7F3 /* PercentDrivenlnteractive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PercentDrivenlnteractive.h; sourceTree = "<group>"; };
 		2BA11E551D3783D400AAE7F3 /* PercentDrivenlnteractive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PercentDrivenlnteractive.m; sourceTree = "<group>"; };
+		2BA11E571D37ADC100AAE7F3 /* PushPageAnimated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushPageAnimated.h; sourceTree = "<group>"; };
+		2BA11E581D37ADC100AAE7F3 /* PushPageAnimated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushPageAnimated.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +83,8 @@
 				2BA11E4F1D376FD400AAE7F3 /* PresentAnimated.m */,
 				2BA11E511D377B0A00AAE7F3 /* DisMissAnimated.h */,
 				2BA11E521D377B0A00AAE7F3 /* DisMissAnimated.m */,
+				2BA11E571D37ADC100AAE7F3 /* PushPageAnimated.h */,
+				2BA11E581D37ADC100AAE7F3 /* PushPageAnimated.m */,
 				2BA11E541D3783D400AAE7F3 /* PercentDrivenlnteractive.h */,
 				2BA11E551D3783D400AAE7F3 /* PercentDrivenlnteractive.m */,
 				2BA11E3A1D376D8900AAE7F3 /* Main.storyboard */,
@@ -174,6 +179,7 @@
 				2BA11E361D376D8900AAE7F3 /* AppDelegate.m in Sources */,
 				2BA11E331D376D8900AAE7F3 /* main.m in Sources */,
 				2BA11E501D376FD400AAE7F3 /* PresentAnimated.m in Sources */,
+				2BA11E591D37ADC100AAE7F3 /* PushPageAnimated.m in Sources */,
 				2BA11E4D1D376E0700AAE7F3 /* ToViewController.m in Sources */,
 				2BA11E531D377B0A00AAE7F3 /* DisMissAnimated.m in Sources */,
 			);

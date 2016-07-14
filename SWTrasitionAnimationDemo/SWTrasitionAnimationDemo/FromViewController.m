@@ -30,13 +30,11 @@
     UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 50)];
     [button setTitle:@"点我" forState:UIControlStateNormal];
     [self.view addSubview:button];
-    
-    
-    
+
     [button addTarget:self action:@selector(present) forControlEvents:UIControlEventTouchUpInside];
     
     
-    
+
 }
 - (void)present{
     
