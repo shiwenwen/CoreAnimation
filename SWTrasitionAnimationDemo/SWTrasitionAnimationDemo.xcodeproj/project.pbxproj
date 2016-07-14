@@ -18,6 +18,10 @@
 		2BA11E531D377B0A00AAE7F3 /* DisMissAnimated.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA11E521D377B0A00AAE7F3 /* DisMissAnimated.m */; };
 		2BA11E561D3783D400AAE7F3 /* PercentDrivenlnteractive.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA11E551D3783D400AAE7F3 /* PercentDrivenlnteractive.m */; };
 		2BA11E591D37ADC100AAE7F3 /* PushPageAnimated.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA11E581D37ADC100AAE7F3 /* PushPageAnimated.m */; };
+		886F2E271D37CDBB0075BC0B /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 886F2E261D37CDBB0075BC0B /* PushViewController.m */; };
+		886F2E2A1D37DE300075BC0B /* PopPageAnimated.m in Sources */ = {isa = PBXBuildFile; fileRef = 886F2E291D37DE300075BC0B /* PopPageAnimated.m */; };
+		886F2E2D1D37E1880075BC0B /* PopPercentDrivenInteractive.m in Sources */ = {isa = PBXBuildFile; fileRef = 886F2E2C1D37E1880075BC0B /* PopPercentDrivenInteractive.m */; };
+		886F2E2F1D37EBD10075BC0B /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 886F2E2E1D37EBD10075BC0B /* 1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +45,13 @@
 		2BA11E551D3783D400AAE7F3 /* PercentDrivenlnteractive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PercentDrivenlnteractive.m; sourceTree = "<group>"; };
 		2BA11E571D37ADC100AAE7F3 /* PushPageAnimated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushPageAnimated.h; sourceTree = "<group>"; };
 		2BA11E581D37ADC100AAE7F3 /* PushPageAnimated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushPageAnimated.m; sourceTree = "<group>"; };
+		886F2E251D37CDBB0075BC0B /* PushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
+		886F2E261D37CDBB0075BC0B /* PushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
+		886F2E281D37DE300075BC0B /* PopPageAnimated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopPageAnimated.h; sourceTree = "<group>"; };
+		886F2E291D37DE300075BC0B /* PopPageAnimated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopPageAnimated.m; sourceTree = "<group>"; };
+		886F2E2B1D37E1880075BC0B /* PopPercentDrivenInteractive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopPercentDrivenInteractive.h; sourceTree = "<group>"; };
+		886F2E2C1D37E1880075BC0B /* PopPercentDrivenInteractive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopPercentDrivenInteractive.m; sourceTree = "<group>"; };
+		886F2E2E1D37EBD10075BC0B /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,20 +84,27 @@
 		2BA11E301D376D8900AAE7F3 /* SWTrasitionAnimationDemo */ = {
 			isa = PBXGroup;
 			children = (
+				886F2E2E1D37EBD10075BC0B /* 1.png */,
 				2BA11E341D376D8900AAE7F3 /* AppDelegate.h */,
 				2BA11E351D376D8900AAE7F3 /* AppDelegate.m */,
 				2BA11E481D376DFF00AAE7F3 /* FromViewController.h */,
 				2BA11E491D376DFF00AAE7F3 /* FromViewController.m */,
 				2BA11E4B1D376E0700AAE7F3 /* ToViewController.h */,
 				2BA11E4C1D376E0700AAE7F3 /* ToViewController.m */,
+				886F2E251D37CDBB0075BC0B /* PushViewController.h */,
+				886F2E261D37CDBB0075BC0B /* PushViewController.m */,
 				2BA11E4E1D376FD400AAE7F3 /* PresentAnimated.h */,
 				2BA11E4F1D376FD400AAE7F3 /* PresentAnimated.m */,
 				2BA11E511D377B0A00AAE7F3 /* DisMissAnimated.h */,
 				2BA11E521D377B0A00AAE7F3 /* DisMissAnimated.m */,
 				2BA11E571D37ADC100AAE7F3 /* PushPageAnimated.h */,
 				2BA11E581D37ADC100AAE7F3 /* PushPageAnimated.m */,
+				886F2E281D37DE300075BC0B /* PopPageAnimated.h */,
+				886F2E291D37DE300075BC0B /* PopPageAnimated.m */,
 				2BA11E541D3783D400AAE7F3 /* PercentDrivenlnteractive.h */,
 				2BA11E551D3783D400AAE7F3 /* PercentDrivenlnteractive.m */,
+				886F2E2B1D37E1880075BC0B /* PopPercentDrivenInteractive.h */,
+				886F2E2C1D37E1880075BC0B /* PopPercentDrivenInteractive.m */,
 				2BA11E3A1D376D8900AAE7F3 /* Main.storyboard */,
 				2BA11E3D1D376D8900AAE7F3 /* Assets.xcassets */,
 				2BA11E3F1D376D8900AAE7F3 /* LaunchScreen.storyboard */,
@@ -162,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BA11E411D376D8900AAE7F3 /* LaunchScreen.storyboard in Resources */,
+				886F2E2F1D37EBD10075BC0B /* 1.png in Resources */,
 				2BA11E3E1D376D8900AAE7F3 /* Assets.xcassets in Resources */,
 				2BA11E3C1D376D8900AAE7F3 /* Main.storyboard in Resources */,
 			);
@@ -176,12 +195,15 @@
 			files = (
 				2BA11E561D3783D400AAE7F3 /* PercentDrivenlnteractive.m in Sources */,
 				2BA11E4A1D376DFF00AAE7F3 /* FromViewController.m in Sources */,
+				886F2E271D37CDBB0075BC0B /* PushViewController.m in Sources */,
 				2BA11E361D376D8900AAE7F3 /* AppDelegate.m in Sources */,
 				2BA11E331D376D8900AAE7F3 /* main.m in Sources */,
+				886F2E2D1D37E1880075BC0B /* PopPercentDrivenInteractive.m in Sources */,
 				2BA11E501D376FD400AAE7F3 /* PresentAnimated.m in Sources */,
 				2BA11E591D37ADC100AAE7F3 /* PushPageAnimated.m in Sources */,
 				2BA11E4D1D376E0700AAE7F3 /* ToViewController.m in Sources */,
 				2BA11E531D377B0A00AAE7F3 /* DisMissAnimated.m in Sources */,
+				886F2E2A1D37DE300075BC0B /* PopPageAnimated.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +356,7 @@
 				2BA11E471D376D8900AAE7F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

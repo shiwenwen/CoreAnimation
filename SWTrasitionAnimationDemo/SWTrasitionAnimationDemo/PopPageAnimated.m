@@ -1,14 +1,14 @@
 //
-//  PushPageAnimated.m
+//  PopPageAnimated.m
 //  SWTrasitionAnimationDemo
 //
 //  Created by 石文文 on 16/7/14.
 //  Copyright © 2016年 石文文. All rights reserved.
 //
 
-#import "PushPageAnimated.h"
+#import "PopPageAnimated.h"
 
-@implementation PushPageAnimated
+@implementation PopPageAnimated
 
 -(NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext{
     
@@ -18,31 +18,26 @@
     
     UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
-//
+    //
     UIView *view = [transitionContext containerView];
-    [view addSubview:toVC.view];
+    UIView *toView = toVC.view;
     [view addSubview:fromVC.view];
+    [view addSubview:toView];
     
-    CALayer *fromLayer = fromVC.view.layer;
     
-//    CALayer *toLayer = toVC.view.layer;
     CATransform3D transform = CATransform3DIdentity;
     transform.m34 = - 1/500.0;
-    
+    toVC.view.alpha = 0.8;
     view.layer.sublayerTransform = transform;
-    [self setAnrcPoint:CGPointMake(0, 0.5) view:fromVC.view];
-    
-    
-    
-    [UIView animateWithDuration:.8 animations:^{
-     fromLayer.transform = CATransform3DMakeRotation(-M_PI_2, 0, 1, 0);
-        fromVC.view.alpha = 0.9;
+    toVC.view.layer.transform = CATransform3DMakeRotation( -M_PI_2, 0, 1, 0);
+    [UIView animateWithDuration:.9 animations:^{
+        toView.layer.transform = CATransform3DIdentity;
+        toVC.view.alpha = 1;
     } completion:^(BOOL finished) {
-        
-        [transitionContext completeTransition:YES];
+          [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
     }];
     
-
+    
     
 }
 
@@ -54,6 +49,4 @@
     
     
 }
-
-
 @end

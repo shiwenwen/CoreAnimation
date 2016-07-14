@@ -11,9 +11,14 @@
 #import "PresentAnimated.h"
 #import "DisMissAnimated.h"
 #import "PercentDrivenlnteractive.h"
-@interface FromViewController ()<UIViewControllerTransitioningDelegate>{
+#import "PushViewController.h"
+#import "PushPageAnimated.h"
+#import "PopPageAnimated.h"
+#import "PopPercentDrivenInteractive.h"
+@interface FromViewController ()<UIViewControllerTransitioningDelegate,UINavigationControllerDelegate>{
     
     PercentDrivenlnteractive *_per;
+    PopPercentDrivenInteractive *_pop;
 }
 
 @end
@@ -27,14 +32,27 @@
     
     self.view.backgroundColor = [UIColor greenColor];
     
-    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 50)];
+    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(100, 200, 100, 50)];
     [button setTitle:@"点我" forState:UIControlStateNormal];
     [self.view addSubview:button];
 
-    [button addTarget:self action:@selector(present) forControlEvents:UIControlEventTouchUpInside];
+//    [button addTarget:self action:@selector(present) forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:self action:@selector(push) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.navigationController.delegate = self;
+    
+    self.view.layer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"1"].CGImage);
+   
     
     
+}
 
+-(void)push{
+    _pop = [PopPercentDrivenInteractive new];
+    PushViewController *push = [PushViewController new];
+    [_pop gestureViewController:push];
+    [self.navigationController pushViewController:push animated:YES];
+    
 }
 - (void)present{
     
@@ -51,6 +69,7 @@
 
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
  
+    
     return [PresentAnimated new];
 }
 
@@ -68,6 +87,25 @@
     
     return _per.interacting ? _per:nil;
 }
+
+
+
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC{
+    
+    if (operation == UINavigationControllerOperationPush) {
+        return [PushPageAnimated new];
+    }
+    
+    return [PopPageAnimated new];
+}
+
+- (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController{
+    
+    
+    return _pop.interacting? _pop:nil;
+}
+
+
 
 
 - (void)didReceiveMemoryWarning {
