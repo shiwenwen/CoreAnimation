@@ -32,12 +32,18 @@
     
     self.view.backgroundColor = [UIColor greenColor];
     
-    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(100, 200, 100, 50)];
-    [button setTitle:@"点我" forState:UIControlStateNormal];
-    [self.view addSubview:button];
+    UIButton *button1 = [[UIButton alloc]initWithFrame:CGRectMake(100, 200, 100, 50)];
+    [button1 setTitle:@"点我" forState:UIControlStateNormal];
+    [self.view addSubview:button1];
 
-//    [button addTarget:self action:@selector(present) forControlEvents:UIControlEventTouchUpInside];
-    [button addTarget:self action:@selector(push) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    UIButton *button2 = [[UIButton alloc]initWithFrame:CGRectMake(100, 400, 100, 50)];
+    [button2 setTitle:@"点我" forState:UIControlStateNormal];
+    [self.view addSubview:button2];
+    
+    [button1 addTarget:self action:@selector(present) forControlEvents:UIControlEventTouchUpInside];
+    [button2 addTarget:self action:@selector(push) forControlEvents:UIControlEventTouchUpInside];
     
     self.navigationController.delegate = self;
     
