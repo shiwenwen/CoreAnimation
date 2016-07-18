@@ -32,13 +32,41 @@
     view.layer.sublayerTransform = transform;
     [self setAnrcPoint:CGPointMake(0, 0.5) view:fromVC.view];
     
+    //阴影
+    CAGradientLayer *fromArad = [CAGradientLayer new];
+    fromArad.frame = fromLayer.bounds;
+    fromArad.colors = @[(__bridge id)[UIColor blackColor].CGColor,
+                        (__bridge id)[UIColor blackColor].CGColor];
+    fromArad.startPoint = CGPointMake(0.0, 0.5);
+    fromArad.endPoint = CGPointMake(0.8, 0.5);
+    
+    UIView *fromShadow = [[UIView alloc]initWithFrame:fromVC.view.bounds];
+    [fromShadow.layer addSublayer:fromArad];
+    fromShadow.alpha = 0;
+    [fromVC.view addSubview:fromShadow];
+    
+    CAGradientLayer *toArad = [CAGradientLayer new];
+    toArad.frame = toVC.view.bounds;
+    toArad.colors = @[(__bridge id)[UIColor blackColor].CGColor,
+                        (__bridge id)[UIColor blackColor].CGColor];
+    toArad.startPoint = CGPointMake(0.0, 0.5);
+    toArad.endPoint = CGPointMake(0.8, 0.5);
+    
+    UIView *toShadow = [[UIView alloc]initWithFrame:toVC.view.bounds];
+    [toShadow.layer addSublayer:toArad];
+    toShadow.alpha = 0.9;
+    [toVC.view addSubview:toShadow];
+    
+    
     
     
     [UIView animateWithDuration:.8 animations:^{
      fromLayer.transform = CATransform3DMakeRotation(-M_PI_2, 0, 1, 0);
-        fromVC.view.alpha = 0.9;
+        fromShadow.alpha = 0.9;
+        toShadow.alpha = 0;
     } completion:^(BOOL finished) {
-        
+        [fromShadow removeFromSuperview];
+        [toShadow removeFromSuperview];
         [transitionContext completeTransition:YES];
     }];
     
